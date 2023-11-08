@@ -7,7 +7,7 @@ else:
     print('Good age')
 print('Program ends')
 
-x = input('Howe much do you earn? ')
+x = input('How much do you earn? ')
 salary = int(x)
 
 if salary > 5000:
