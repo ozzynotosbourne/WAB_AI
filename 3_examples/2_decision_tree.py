@@ -15,3 +15,7 @@ X = df.iloc[:, :4]  # take 4 first columns
 y = df.class_value
 model = DecisionTreeClassifier()
 model.fit(X, y)
+
+from dtreeplt import dtreeplt
+dtreeplt(model)
+plt.show()
