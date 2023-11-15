@@ -23,3 +23,17 @@ model = KNeighborsClassifier()
 model.fit(X_train, y_train)
 print(model.score(X_test, y_test))
 print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
+
+from sklearn.tree import DecisionTreeClassifier
+print('\nDecission  Tree Clasifier')
+model = DecisionTreeClassifier()
+model.fit(X_train, y_train)
+print(model.score(X_test, y_test))
+print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
+
+from sklearn.svm import SVC
+print('\nSVC')
+model = SVC()
+model.fit(X_train, y_train)
+print(model.score(X_test, y_test))
+print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
