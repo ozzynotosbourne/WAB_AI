@@ -26,14 +26,21 @@ print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
 
 from sklearn.tree import DecisionTreeClassifier
 print('\nDecission  Tree Clasifier')
-model = DecisionTreeClassifier()
+model = DecisionTreeClassifier(criterion='entropy', max_depth=5, min_samples_split=5)
 model.fit(X_train, y_train)
 print(model.score(X_test, y_test))
 print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
 
 from sklearn.svm import SVC
 print('\nSVC')
-model = SVC()
+model = SVC(kernel='poly', degree=10, gamma='auto', decision_function_shape='ovo')
 model.fit(X_train, y_train)
 print(model.score(X_test, y_test))
 print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
+
+# ................. project
+# choose "make_circles" parameters and generate your data
+# find possibly best sulution using at least 2 algoritms algorthms
+# investigate parameters mentioned in example
+# add at least one more parameter to each algorithm (not verbose, not random state)
+# deliver code + pdf report on moodle till day of our last class
