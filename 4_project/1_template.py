@@ -19,7 +19,7 @@ print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))    #print d
 
 from sklearn.neighbors import KNeighborsClassifier
 print('\nKNN')
-model = KNeighborsClassifier()
+model = KNeighborsClassifier(n_neighbors=530, weights='distance', n_jobs=10)
 model.fit(X_train, y_train)
 print(model.score(X_test, y_test))
 print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
