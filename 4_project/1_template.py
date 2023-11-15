@@ -12,7 +12,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 from sklearn.linear_model import LogisticRegression
 print('\nLogistic regression')
-model = LogisticRegression()   #choose the model
+model = LogisticRegression(solver='liblinear', max_iter=2000, multi_class='ovr', verbose=0)   #choose the model
 model.fit(X_train, y_train)    #teach the model
 print(model.score(X_test, y_test))      #print accuracy
 print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))    #print details
