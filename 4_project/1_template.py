@@ -40,7 +40,7 @@ print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
 
 # ................. project
 # choose "make_circles" parameters and generate your data
-# find possibly best sulution using at least 2 algoritms algorthms
+# find possibly best solution using at least 2 algorithms
 # investigate parameters mentioned in example
 # add at least one more parameter to each algorithm (not verbose, not random state)
 # deliver code + pdf report on moodle till day of our last class
